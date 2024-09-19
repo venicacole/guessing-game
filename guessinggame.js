@@ -7,13 +7,25 @@
 // 5. If a user guesses within three chances, display an alert letting the user know they've won and what the number was.
 // 6. If a user loses, display an alert letting the user know they have lost and reveal the number.
 
+//Generate Random Number Between 1-50
+let randomNumber = Math.floor(Math.random() * 50) + 1;
+
 //Prompt for Name
 let playerName = prompt("Hey! What's Your Name?");
 console.log("The player's name", playerName);
 
 
 
+//Player has 3 Guesses
+let playerGuesses = 3; 
+
+//Indicates Each Guess for Player
+let Guess1, Guess2, Guess3;
+
+//if (playerGuesses === 3) {
+
+// } else if () {
 
 
+// }
 
-//const randomNumber = Math.floor(Math.random() * 50 + 1;
