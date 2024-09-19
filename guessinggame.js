@@ -22,7 +22,10 @@ let playerGuesses = 3;
 //Indicates Each Guess for Player
 let Guess1, Guess2, Guess3;
 
-//if (playerGuesses === 3) {
+//Game Begins by Having Player Pick a Number
+let guessStart = Number(prompt("Hey " + playerName + ", play to win by guessing a number between 1-50!"));
+
+
 
 // } else if () {
 
