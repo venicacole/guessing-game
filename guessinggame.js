@@ -31,9 +31,11 @@ if (guessStart === 3) {
 } else if (guessStart > randomNumber) {
     alert("Ohh nooo, that's too HIGH " + playerName + " you have 2 guesses left!"); 
     playerGuesses--;
+    Guess1 = Number(prompt ("Try again " + playerName + " you have 2 guesses left!"));
+
 } else if (guessStart < randomNumber) {
     alert("Yikes, that was too LOW " + playerName + " you have 1 guess left!");
     playerGuesses--;
-    
+    Guess1 = Number(prompt ("Try again " + playerName + " you have 2 guesses left!"));
 }
 
