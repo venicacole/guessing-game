@@ -15,7 +15,6 @@ let playerName = prompt("Hey! What's Your Name?");
 console.log("The player's name", playerName);
 
 
-
 //Player has 3 Guesses
 let playerGuesses = 3; 
 
@@ -26,9 +25,15 @@ let Guess1, Guess2, Guess3;
 let guessStart = Number(prompt("Hey " + playerName + ", play to win by guessing a number between 1-50!"));
 
 
-
-// } else if () {
-
-
-// }
+if (guessStart === 3) {
+    alert("Yayy " + playerName + " you did it! That was the correct answer!");
+       
+} else if (guessStart > randomNumber) {
+    alert("Ohh nooo, that's too HIGH " + playerName + " you have 2 guesses left!"); 
+    playerGuesses--;
+} else if (guessStart < randomNumber) {
+    alert("Yikes, that was too LOW " + playerName + " you have 1 guess left!");
+    playerGuesses--;
+    
+}
 
