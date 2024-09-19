@@ -24,8 +24,8 @@ let Guess1, Guess2, Guess3;
 //Game Begins by Having Player Pick a Number
 let guessStart = Number(prompt("Hey " + playerName + ", play to win by guessing a number between 1-50!"));
 
-
-if (guessStart === 3) {
+//First Guess
+if (guessStart === randomNumber) {
     alert("Yayy " + playerName + " you did it! That was the correct answer!");
        
 } else if (guessStart > randomNumber) {
@@ -34,8 +34,34 @@ if (guessStart === 3) {
     Guess1 = Number(prompt ("Try again " + playerName + " you have 2 guesses left!"));
 
 } else if (guessStart < randomNumber) {
-    alert("Yikes, that was too LOW " + playerName + " you have 1 guess left!");
+    alert("Yikes, that was too LOW " + playerName + " you have 2 guess left!");
     playerGuesses--;
     Guess1 = Number(prompt ("Try again " + playerName + " you have 2 guesses left!"));
 }
 
+//Second Guess
+if (Guess1 === randomNumber) {
+    alert("Yayy " + playerName + " you did it! That was the correct answer!");
+       
+} else if (Guess1 > randomNumber) {
+    alert("Ohh nooo, that's too HIGH " + playerName + " you have 1 guess left!"); 
+    playerGuesses--;
+    Guess2 = Number(prompt ("Try again " + playerName + " you have 1 guess left!"));
+
+} else if (Guess1 < randomNumber) {
+    alert("Yikes, that was too LOW " + playerName + " you have 1 guess left!");
+    playerGuesses--;
+    Guess2 = Number(prompt ("Try again " + playerName + " you have 1 guesses left!"));
+}
+
+//Final Guess
+if (Guess2 === randomNumber) {
+    alert("Yayy " + playerName + " you did it! That was the correct answer!");
+       
+} else if (Guess2 > randomNumber) {
+    alert("Ohh nooo, that's too HIGH " + playerName + ". The correct number was " + randomNumber + ". You didn't win this time."); 
+
+} else if (Guess1 < randomNumber) {
+    alert("Yikes, that was too LOW " + playerName + ". The correct number was " + randomNumber + ". You didn't win this time.");
+
+}
